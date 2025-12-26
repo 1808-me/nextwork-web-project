@@ -3,8 +3,9 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto17
+      java: corretto8
     commands:
+      - echo "Using Java version:"
       - java -version
       - mvn -version
 
@@ -15,4 +16,5 @@ phases:
 artifacts:
   files:
     - target/*.war
+
 
