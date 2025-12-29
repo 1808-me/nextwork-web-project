@@ -8,16 +8,14 @@ phases:
       - echo "Using Java version:"
       - java -version
       - mvn -version
-
   build:
     commands:
       - mvn clean package
 
 artifacts:
   files:
-    - target/*.war
-    - appspec.yml
-    - scripts/**/*
+    '**/*'
+
 
 
 

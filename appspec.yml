@@ -1,8 +1,10 @@
 version: 0.0
 os: linux
+
 files:
- - source: target/nextwork-web-project.war
-   destination: /usr/share/tomcat9/webapps/
+  - source: target/nextwork-web-project.war
+    destination: /usr/share/tomcat9/webapps/
+
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
@@ -16,3 +18,4 @@ hooks:
     - location: scripts/stop_server.sh
       timeout: 300
       runas: root
+
