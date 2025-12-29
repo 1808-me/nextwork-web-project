@@ -1,0 +1,35 @@
+<settings>
+
+<servers>
+  <server>
+    <id>devops-codeartifact-rep-sentle</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>devops-codeartifact-rep-sentle</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>devops-codeartifact-rep-sentle</id>
+        <url>https://devops-545009846899.d.codeartifact.us-east-1.amazonaws.com/maven/codeartifact-rep-sentle/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>devops-codeartifact-rep-sentle</id>
+    <name>devops-codeartifact-rep-sentle</name>
+    <url>https://devops-545009846899.d.codeartifact.us-east-1.amazonaws.com/maven/codeartifact-rep-sentle/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+</settings>
